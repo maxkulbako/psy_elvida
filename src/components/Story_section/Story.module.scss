@@ -1,0 +1,60 @@
+.story_container {
+  height: 981px;
+  padding: 100px;
+  background-color: rgba(245, 246, 240, 1);
+
+  .page_number {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 16px;
+    width: fit-content;
+    padding-bottom: 5px;
+    margin-bottom: 32px;
+    border-bottom: 2px solid rgba(140, 151, 117, 1);
+  }
+
+  .quote {
+    .quote_text {
+      font-family: "Poiret One";
+      text-align: end;
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 57.6px;
+    }
+  }
+
+  .section_block {
+    margin-top: 60px;
+    padding-right: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .img_container {
+      width: 420px;
+      height: 550px;
+      box-shadow: -60px 0px 70px -20px rgba(140, 151, 117, 0.6);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .text_wrapper {
+      width: 485px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      h2 {
+        font-weight: 600;
+        font-size: 20px;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 20px;
+      }
+    }
+  }
+}
