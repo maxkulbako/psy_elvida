@@ -16,7 +16,7 @@ export const Confidence = () => {
           межі своїх знань, <br></br>
           досвіду та навичок.
         </p>
-        <img className={styles.small_logo} src={SmallLogo} alt="" />
+        <img className={styles.small_logo} src={SmallLogo} alt="Small_logo" />
       </div>
     </div>
   );
