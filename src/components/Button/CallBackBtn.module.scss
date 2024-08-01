@@ -1,6 +1,6 @@
 .btn_container {
-  width: 300px;
-  height: 50px;
+  width: 263px;
+  height: 62px;
   padding: 6px;
   border: 0.5px solid #42412d;
   border-radius: 100px;
@@ -16,8 +16,10 @@
   background: linear-gradient(360deg, #1b1c16 1.88%, #5f7237 93.77%);
   transition: 0.3s ease-in;
 
-  &:hover {
-    background: none;
-    color: rgba(66, 65, 45, 1);
+  @media (min-width: 1440px) {
+    &:hover {
+      background: none;
+      color: rgba(66, 65, 45, 1);
+    }
   }
 }
