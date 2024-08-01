@@ -11,7 +11,7 @@ export const About = () => {
           ЯК <span>ВИРІШИТИ</span>
         </p>
         <p>
-          КЛАДНІ <span>СИТУАЦІЇ</span>
+          СКЛАДНІ <span>СИТУАЦІЇ</span>
         </p>
       </div>
       <div className={styles.text_wrapper}>
