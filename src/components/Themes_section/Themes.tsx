@@ -1,6 +1,7 @@
 import styles from "./Themes.module.scss";
 import Themes_img from "../../assets/themes_img.jpeg";
 import Questions_img from "../../assets/questions_img.jpeg";
+import { SectionTitle } from "../Typography/Title";
 
 export const Themes = () => {
   return (
@@ -8,7 +9,14 @@ export const Themes = () => {
       <p className={styles.page_number}>02</p>
       <div className={styles.themes_block}>
         <div className={styles.text_block_wrapper}>
-          <p className={styles.title}>Теми, на які Ти знайдеш відповіді</p>
+          <SectionTitle
+            width="360px"
+            align="left"
+            borderBottom="dark"
+            color="light"
+          >
+            Теми, на які Ти знайдеш відповіді
+          </SectionTitle>
           <div className={styles.themes_wrapper}>
             <div className={styles.thema_wrapper}>
               <p>ВІДНОСИНИ В СІМʼЇ, РОДИНІ</p>
