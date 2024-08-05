@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 import { theme } from "../../styles/theme";
 
 interface StyledTitleProps {
-  width?: string;
   align?: "left" | "right";
   color?: "dark" | "light";
   borderBottom?: "dark" | "light" | "none";
@@ -14,9 +13,7 @@ export const StyledTitle = styled.p<StyledTitleProps>`
   font-weight: ${theme.fonts.titleSection.fontWeight.mobile};
   line-height: ${theme.fonts.titleSection.lineHeight.mobile}px;
   padding-bottom: 20px;
-  max-width: ${(props) => props.width || "100%"};
-  text-align: ${(props) => (props.align === "left" ? "left" : "right")};
-  align-self: ${(props) => (props.align === "left" ? "start" : "end")};
+  text-align: center;
   color: ${(props) =>
     props.color === "dark" ? theme.colors.mainTitle : theme.colors.white};
 
@@ -32,6 +29,7 @@ export const StyledTitle = styled.p<StyledTitleProps>`
   ${theme.media.tablet} {
     font-size: ${theme.fonts.titleSection.fontSize.tablet}px;
     line-height: ${theme.fonts.titleSection.lineHeight.tablet}px;
+    text-align: ${(props) => (props.align === "left" ? "left" : "right")};
   }
 
   ${theme.media.desktop} {

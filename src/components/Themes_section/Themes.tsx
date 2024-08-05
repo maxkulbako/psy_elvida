@@ -9,12 +9,7 @@ export const Themes = () => {
       <p className={styles.page_number}>02</p>
       <div className={styles.themes_block}>
         <div className={styles.text_block_wrapper}>
-          <SectionTitle
-            width="360px"
-            align="left"
-            borderBottom="dark"
-            color="light"
-          >
+          <SectionTitle align="left" borderBottom="dark" color="light">
             Теми, на які Ти знайдеш відповіді
           </SectionTitle>
           <div className={styles.themes_wrapper}>
