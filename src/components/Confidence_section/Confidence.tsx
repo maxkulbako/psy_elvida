@@ -1,23 +1,34 @@
-import styles from "./Confidence.module.scss";
 import SmallLogo from "../../assets/small_logo.svg";
+import {
+  ConfidenceBlock,
+  ConfidenceContainer,
+  Text,
+  ConfidenceTitleWrapper,
+} from "./Confidence.styles";
+import { StyledPageNumber } from "../Typography/PageNumber.styles";
+import { SectionTitle } from "../Typography/Title";
 
 export const Confidence = () => {
   return (
-    <div className={styles.confidence_container}>
-      <p className={styles.page_number}>05</p>
-      <div className={styles.confidence_block}>
-        <p className={styles.title}>100% КОНФІДЕНЦІЙНОСТІ</p>
-        <p className={styles.text_block}>
+    <ConfidenceContainer>
+      <StyledPageNumber align="left" color="light">
+        06
+      </StyledPageNumber>
+      <ConfidenceBlock>
+        <ConfidenceTitleWrapper>
+          <SectionTitle borderBottom="dark">100% КОНФІДЕНЦІЙНОСТІ</SectionTitle>
+        </ConfidenceTitleWrapper>
+        <Text>
           Я дію відповідно до етичних стандартів УАПП <br></br>
           <br></br>
-        </p>
-        <p className={styles.text_block}>
+        </Text>
+        <Text>
           Завжди враховую інтереси своїх клієнтів, усвідомлюю <br></br>
           межі своїх знань, <br></br>
           досвіду та навичок.
-        </p>
-        <img className={styles.small_logo} src={SmallLogo} alt="Small_logo" />
-      </div>
-    </div>
+        </Text>
+        <img src={SmallLogo} alt="Small_logo" />
+      </ConfidenceBlock>
+    </ConfidenceContainer>
   );
 };
