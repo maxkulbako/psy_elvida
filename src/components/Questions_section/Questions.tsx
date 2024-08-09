@@ -1,7 +1,15 @@
-import styles from "./Questions.module.scss";
-import ArrowDownIcon from "../../assets/arrow_down.svg";
-import ArrowUpIcon from "../../assets/arrow_up.svg";
+import { SectionContainer } from "../Typography/SectionContainer";
+
 import { useState } from "react";
+import {
+  PageNumber,
+  Question,
+  AnswerWrapper,
+  Answer,
+  FaqWrapper,
+  FaqBlock,
+} from "./Questions.styles";
+import { SectionTitle } from "../Typography/Title";
 
 interface FaqItemProps {
   question: string;
@@ -15,29 +23,18 @@ interface FaqItemData {
   answer: string;
 }
 
-const FaqItem: React.FC<FaqItemProps> = ({
-  question,
-  answer,
-  isOpen,
-  toggle,
-}) => {
+const FaqItem = ({ question, answer, isOpen, toggle }: FaqItemProps) => {
   return (
-    <div className={styles.faq_wrapper}>
-      <div className={styles.question} onClick={toggle}>
+    <div>
+      <Question onClick={toggle}>
         <h3>{question}</h3>
-        <img src={ArrowDownIcon} alt="ArrowIcon" />
-      </div>
-      <div
-        className={`${styles.answer_wrapper} ${isOpen ? styles.active : ""}`}
-      >
-        <div className={styles.answer}>
-          <div className={styles.answer_title}>
-            <h3>{question}</h3>
-            <img src={ArrowUpIcon} alt="ArrowIcon" />
-          </div>
+      </Question>
+      <AnswerWrapper isOpen={isOpen}>
+        <Answer>
+          <h3>{question}</h3>
           <p>{answer}</p>
-        </div>
-      </div>
+        </Answer>
+      </AnswerWrapper>
     </div>
   );
 };
@@ -83,20 +80,24 @@ export const Questions = () => {
   };
 
   return (
-    <div className={styles.questions_container}>
-      <p className={styles.page_number}>07</p>
-      <div className={styles.block_wrapper}>
-        <p className={styles.title}>Відповіді на часті запитання</p>
-        {faqItems.map((item, index) => (
-          <FaqItem
-            key={index}
-            question={item.question}
-            answer={item.answer}
-            isOpen={activeIndex === index}
-            toggle={() => toggleAnswer(index)}
-          />
-        ))}
-      </div>
-    </div>
+    <SectionContainer background="green">
+      <PageNumber align="left">07</PageNumber>
+      <FaqWrapper>
+        <SectionTitle borderBottom="light">
+          Відповіді на часті запитання
+        </SectionTitle>
+        <FaqBlock>
+          {faqItems.map((item, index) => (
+            <FaqItem
+              key={index}
+              question={item.question}
+              answer={item.answer}
+              isOpen={activeIndex === index}
+              toggle={() => toggleAnswer(index)}
+            />
+          ))}
+        </FaqBlock>
+      </FaqWrapper>
+    </SectionContainer>
   );
 };
