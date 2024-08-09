@@ -1,9 +1,7 @@
-import styles from "./Story.module.scss";
 import Story_img from "../../assets/story.jpeg";
 import { SectionTitle } from "../Typography/Title";
 import {
   StoryTitleWrapper,
-  SectionContainer,
   SectioWrapper,
   StoryBlock,
   StoryImgContainer,
@@ -12,6 +10,7 @@ import {
   Text,
 } from "./Story.styles";
 import { StyledPageNumber } from "../Typography/PageNumber.styles";
+import { SectionContainer } from "../Typography/SectionContainer";
 
 export const Story = () => {
   return (

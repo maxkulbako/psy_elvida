@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { media, theme } from "../../styles/theme";
+import { media } from "../../styles/theme";
 
 export const StoryTitleWrapper = styled.div`
   ${media.tablet} {
@@ -9,18 +9,6 @@ export const StoryTitleWrapper = styled.div`
 
   ${media.desktop} {
     max-width: 640px;
-  }
-`;
-
-export const SectionContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  padding: 60px 32px;
-  background-color: ${theme.colors.mainLightBg};
-
-  ${media.desktop} {
-    padding: 100px;
   }
 `;
 
