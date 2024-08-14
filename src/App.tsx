@@ -10,6 +10,7 @@ import { Programs } from "./components/Programs_section/Promgrams";
 import { Questions } from "./components/Questions_section/Questions";
 import { Additional } from "./components/Additional_section/Additional";
 import { globalStyles } from "./styles/global";
+import { Footer } from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Programs />
         <Questions />
         <Additional />
+        <Footer/>
       </>
     </ThemeProvider>
   );

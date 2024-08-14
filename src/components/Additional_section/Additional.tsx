@@ -8,7 +8,6 @@ import {
   SectioWrapper,
 } from "./Additional.styles";
 import AdditionalImg from "../../assets/additional.jpeg";
-import { TelegramBtnIcon } from "../Icons/TelegramIcon";
 
 export const Additional = () => {
   return (
@@ -17,10 +16,7 @@ export const Additional = () => {
         <CallBackWrapper>
           <SectionTitle color="dark">Все ще залишились питання?</SectionTitle>
           <CallBackText>Напиши їх мені в Telegram</CallBackText>
-          <CallBackButton
-            svgIcon={<TelegramBtnIcon color="currentColor" />}
-            text="Звʼязатися"
-          />
+          <CallBackButton text="Звʼязатися" />
         </CallBackWrapper>
         <AdditionalImgContainer>
           <img src={AdditionalImg} alt="AdditionalImg" />

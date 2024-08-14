@@ -32,7 +32,7 @@ export const Header = () => {
         </ul>
       </nav>
       <div className={styles.callback_header_wrapper}>
-        <CallBackButton />
+        <CallBackButton text="Звʼязатися" />
       </div>
       <div className={styles.burger_container}>
         <div
