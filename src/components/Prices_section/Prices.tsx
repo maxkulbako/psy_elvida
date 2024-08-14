@@ -63,7 +63,7 @@ export const Prices = () => {
             </PriceText>
           </PriceCard>
         </PricesBlock>
-        <CallBackButton />
+        <CallBackButton text="Звʼязатися" />
       </PricesWrapper>
     </SectionContainer>
   );

@@ -1,12 +1,18 @@
 /** @jsxImportSource @emotion/react */
-import { buttonStyles, buttonContainerStyles } from "./CallBackBtn.styles.ts";
+import { StyledButton, ButtonWrapper, SvgIcon } from "./CallBackBtn.styles.ts";
 
-export const CallBackButton = () => {
+interface CallBackButtonProps {
+  text: string;
+  svgIcon?: React.ReactNode;
+}
+
+export const CallBackButton = ({ text, svgIcon }: CallBackButtonProps) => {
   return (
-    <div css={buttonContainerStyles}>
-      <button css={buttonStyles} onClick={() => console.log("Call Back")}>
-        Звʼязатися
-      </button>
-    </div>
+    <ButtonWrapper>
+      <StyledButton onClick={() => console.log("Call Back")}>
+        {svgIcon && <SvgIcon>{svgIcon}</SvgIcon>}
+        {text}
+      </StyledButton>
+    </ButtonWrapper>
   );
 };

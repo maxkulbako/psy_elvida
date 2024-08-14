@@ -21,7 +21,7 @@ export const About = () => {
         <p>Пізнай себе по-новому!</p>
       </div>
       <div className={styles.btn_wrapper}>
-        <CallBackButton />
+        <CallBackButton text="Звʼязатися" />
       </div>
       <div className={styles.img_wrapper}>
         <div className={styles.quote}>

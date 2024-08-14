@@ -8,6 +8,7 @@ import { Story } from "./components/Story_section/Story";
 import { Themes } from "./components/Themes_section/Themes";
 import { Programs } from "./components/Programs_section/Promgrams";
 import { Questions } from "./components/Questions_section/Questions";
+import { Additional } from "./components/Additional_section/Additional";
 import { globalStyles } from "./styles/global";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Confidence />
         <Programs />
         <Questions />
+        <Additional />
       </>
     </ThemeProvider>
   );
