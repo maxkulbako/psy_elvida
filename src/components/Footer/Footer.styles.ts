@@ -54,6 +54,10 @@ export const FooterLogoContainer = styled.div`
   img {
     height: inherit;
   }
+
+  ${media.desktop} {
+    display: block;
+  }
 `;
 
 export const FooterSmallLogoContainer = styled.div`
@@ -61,6 +65,10 @@ export const FooterSmallLogoContainer = styled.div`
 
   img {
     height: inherit;
+  }
+
+  ${media.desktop} {
+    display: none;
   }
 `;
 
