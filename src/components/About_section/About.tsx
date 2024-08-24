@@ -1,5 +1,5 @@
 import styles from "./About.module.scss";
-import About_img from "../../assets/about_img.jpeg";
+import About_img from "../../assets/about_img_desk.webp";
 import { CallBackButton } from "../Button/СallBackBtn";
 
 export const About = () => {

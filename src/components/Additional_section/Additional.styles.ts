@@ -2,8 +2,8 @@ import styled from "@emotion/styled";
 import { media } from "../../styles/theme";
 
 export const SectioWrapper = styled.div`
+  width: 100%;
   margin: 0 auto;
-  max-width: 1120px;
   display: flex;
   gap: 32px;
   flex-direction: column;

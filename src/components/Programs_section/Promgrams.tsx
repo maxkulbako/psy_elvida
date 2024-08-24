@@ -1,5 +1,5 @@
 import { StyledPageNumber } from "../Typography/PageNumber.styles";
-import Programs_img from "../../assets/programs_img.jpeg";
+import Programs_img from "../../assets/programs_img_desk.webp";
 import { SectionTitle } from "../Typography/Title";
 import {
   ProgramCardWrapper,

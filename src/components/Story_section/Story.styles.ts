@@ -41,24 +41,29 @@ export const StoryBlock = styled.div`
 `;
 
 export const StoryImgContainer = styled.div`
-  width: 296px;
+  max-width: 256px;
   height: 360px;
   box-shadow: -60px 0px 70px -20px rgba(140, 151, 117, 0.6);
   border-radius: 4px;
   overflow: hidden;
   display: flex;
   align-items: center;
-  object-fit: cover;
   flex-shrink: 0;
 
   ${media.tablet} {
-    width: 336px;
+    max-width: 336px;
     height: 398px;
   }
 
   ${media.desktop} {
-    width: 420px;
+    max-width: 420px;
     height: 550px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 `;
 

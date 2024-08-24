@@ -1,5 +1,5 @@
-import Themes_img from "../../assets/themes_img.jpeg";
-import Questions_img from "../../assets/questions_img.jpeg";
+import Themes_img from "../../assets/themes_img_desk.webp";
+import Questions_img from "../../assets/questions_img_desk.webp";
 import { SectionTitle } from "../Typography/Title";
 import { StyledPageNumber } from "../Typography/PageNumber.styles";
 import {

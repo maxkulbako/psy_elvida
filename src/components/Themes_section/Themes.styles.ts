@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { SectionContainer } from "../Typography/SectionContainer";
 import { media, theme } from "../../styles/theme";
-import ThemesImg from "../../assets/themes_img.jpeg";
+import ThemesImg from "../../assets/themes_img_desk.webp";
 import QuotesSvg from "../../assets/quotes.svg";
 
 export const ThemesContainer = styled(SectionContainer)`
@@ -28,10 +28,11 @@ export const ThemesWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
   gap: 32px;
 
   ${media.desktop} {
+    align-items: start;
     flex-direction: row;
     padding: 0 60px 68px 60px;
   }
@@ -41,10 +42,11 @@ export const ThemesTitleWrapper = styled.div`
   max-width: 281px;
 
   ${media.tablet} {
-    max-width: 210px;
+    max-width: none;
   }
 
   ${media.desktop} {
+    align-self: start;
     max-width: 360px;
   }
 `;
@@ -74,6 +76,7 @@ export const ThemesBlockWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 30px;
+  align-items: center;
 
   ${media.desktop} {
     gap: 60px;

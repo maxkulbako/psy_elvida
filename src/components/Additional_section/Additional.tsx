@@ -7,7 +7,7 @@ import {
   CallBackWrapper,
   SectioWrapper,
 } from "./Additional.styles";
-import AdditionalImg from "../../assets/additional.jpeg";
+import AdditionalImg from "../../assets/additional_img_desk.webp";
 
 export const Additional = () => {
   return (

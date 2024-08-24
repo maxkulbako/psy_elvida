@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { media, theme } from "../../styles/theme";
 import { SectionContainer } from "../Typography/SectionContainer";
-import ConfidenceImg from "../../assets/confidence.jpeg";
+import ConfidenceImg from "../../assets/confidence_img_desk.webp";
 
 export const ConfidenceContainer = styled(SectionContainer)`
   background: linear-gradient(

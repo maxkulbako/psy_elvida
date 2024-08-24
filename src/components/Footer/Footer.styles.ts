@@ -3,7 +3,7 @@ import { media, theme } from "../../styles/theme";
 import { SectionContainer } from "../Typography/SectionContainer";
 
 export const FooterContainer = styled(SectionContainer)`
-  padding-bottom: 60px;
+  padding-bottom: 32px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -16,6 +16,7 @@ export const FooterContainer = styled(SectionContainer)`
   }
 
   ${media.desktop} {
+    padding-bottom: 32px;
     p {
       text-align: start;
     }

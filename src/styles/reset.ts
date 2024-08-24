@@ -126,19 +126,16 @@ export const reset = css`
   body {
     display: block;
     min-width: 320px;
-    max-width: 360px;
 
     margin-left: auto;
     margin-right: auto;
 
     @media screen and (min-width: 360px) {
       min-width: 360px;
-      max-width: 360px;
     }
 
     @media screen and (min-width: 768px) {
       min-width: 768px;
-      max-width: 768px;
     }
 
     @media screen and (min-width: 1440px) {

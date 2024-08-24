@@ -1,4 +1,4 @@
-import Story_img from "../../assets/story.jpeg";
+import Story_img from "../../assets/story_img_desk.webp";
 import { SectionTitle } from "../Typography/Title";
 import {
   StoryTitleWrapper,

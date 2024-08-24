@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import { media, theme } from "../../styles/theme";
-import { ThemesTitleWrapper } from "../Themes_section/Themes.styles";
 
 interface SectionContainerProps {
   background?: "green" | null;
