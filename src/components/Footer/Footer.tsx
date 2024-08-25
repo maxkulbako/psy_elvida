@@ -8,20 +8,10 @@ import {
 } from "./Footer.styles";
 import Logo from "../../assets/logo.svg";
 import SmallLogo from "../../assets/small_logo.svg";
-import { SocialMediaSvg, SocialMediaSvgProps } from "../Icons/SocialMediaIcons";
-
-interface SocialMediaLink {
-  id: SocialMediaSvgProps["id"];
-  href: string;
-}
+import { SocialMediaSvg } from "../Icons/SocialMediaIcons";
+import { linksData } from "../Icons/SocialMediaIcons";
 
 export const Footer = () => {
-  const linksData: SocialMediaLink[] = [
-    { id: "telegram", href: "*" },
-    { id: "instagram", href: "*" },
-    { id: "facebook", href: "*" },
-    { id: "mobile", href: "*" },
-  ];
   return (
     <footer>
       <FooterContainer background="green">
@@ -38,7 +28,7 @@ export const Footer = () => {
           </FooterLogoContainer>
           <SocialMediaWrapper>
             {linksData.map((link) => (
-              <a key={link.id} href={link.href} target="_blank">
+              <a key={link.id} href={link.link} target="_blank">
                 <SocialMediaSvg id={link.id} />
               </a>
             ))}

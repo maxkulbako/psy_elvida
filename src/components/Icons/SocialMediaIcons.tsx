@@ -143,3 +143,15 @@ export const SocialMediaSvg = ({ id }: SocialMediaSvgProps) => {
       return null;
   }
 };
+
+interface SocialMediaLink {
+  id: SocialMediaSvgProps["id"];
+  link: string;
+}
+
+export const linksData: SocialMediaLink[] = [
+  { id: "telegram", link: "https://google.com" },
+  { id: "instagram", link: "https://google.com" },
+  { id: "facebook", link: "https://google.com" },
+  { id: "mobile", link: "https://google.com" },
+];

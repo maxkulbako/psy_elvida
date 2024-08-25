@@ -11,23 +11,28 @@ import { Questions } from "./components/Questions_section/Questions";
 import { Additional } from "./components/Additional_section/Additional";
 import { globalStyles } from "./styles/global";
 import { Footer } from "./components/Footer/Footer";
+import { Modal } from "./components/Modal_section/Modal";
+import { ModalProvider } from "./ModalContext";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <Global styles={globalStyles} />
-      <>
-        <Header />
-        <About />
-        <Story />
-        <Themes />
-        <Prices />
-        <Confidence />
-        <Programs />
-        <Questions />
-        <Additional />
-        <Footer/>
-      </>
+      <ModalProvider>
+        <>
+          <Header />
+          <About />
+          <Story />
+          <Themes />
+          <Prices />
+          <Confidence />
+          <Programs />
+          <Questions />
+          <Additional />
+          <Footer />
+          <Modal />
+        </>
+      </ModalProvider>
     </ThemeProvider>
   );
 }

@@ -37,7 +37,7 @@ export const CallBackText = styled.div`
 `;
 
 export const AdditionalImgContainer = styled.div`
-  width: 296px;
+  max-width: 296px;
   height: 360px;
   box-shadow: 20px 0px 60px 0px rgba(140, 151, 117, 0.2);
   border-radius: 4px;
@@ -50,13 +50,8 @@ export const AdditionalImgContainer = styled.div`
   position: relative;
 
   ${media.tablet} {
-    width: 669px;
-    height: 704px;
-  }
-
-  ${media.desktop} {
     width: 545px;
-    height: 360px;
+    max-width: none;
 
     img {
       position: absolute;
