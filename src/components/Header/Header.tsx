@@ -1,4 +1,12 @@
-import styles from "./Header.module.scss";
+import {
+  HeaderContainer,
+  LogoWrapper,
+  Menu,
+  BurgerContainer,
+  BurgerWrapper,
+  BurgerLine,
+  CallBackHeaderWrapper,
+} from "./Header.styles";
 import Logo from "../../assets/logo.svg";
 import { CallBackButton } from "../Button/СallBackBtn";
 import { useState } from "react";
@@ -6,45 +14,51 @@ import { useState } from "react";
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const navLinks: { text: string; sectionId: string }[] = [
+    { text: "Про мене", sectionId: "section_story" },
+    { text: "Запити", sectionId: "section_questions" },
+    { text: "Вартість", sectionId: "section_prices" },
+    { text: "Питання", sectionId: "section_faq" },
+  ];
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleButtonClick =
+    (sectionId: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+      e.preventDefault();
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" }); // Прокрутка к элементу
+      }
+      setIsOpen(false);
+    };
+
   return (
-    <header className={styles.header_container}>
-      <div className={styles.logo_container}>
+    <HeaderContainer>
+      <LogoWrapper>
         <img src={Logo} alt="Logo" />
-      </div>
-      <nav className={`${styles.menu} ${isOpen ? styles.open : ""}`}>
+      </LogoWrapper>
+      <Menu isOpen={isOpen}>
         <ul>
-          <li>
-            <a href="#">Про мене</a>
-          </li>
-          <li>
-            <a href="#">Запити</a>
-          </li>
-          <li>
-            <a href="#">Вартість</a>
-          </li>
-          <li>
-            <a href="#">Питання</a>
-          </li>
+          {navLinks.map((link, index) => (
+            <li key={index}>
+              <a onClick={handleButtonClick(link.sectionId)}>{link.text}</a>
+            </li>
+          ))}
         </ul>
-      </nav>
-      <div className={styles.callback_header_wrapper}>
+      </Menu>
+      <CallBackHeaderWrapper>
         <CallBackButton text="Звʼязатися" />
-      </div>
-      <div className={styles.burger_container}>
-        <div
-          className={`${styles.burger_wrapper} ${isOpen ? styles.open : ""}`}
-          onClick={toggleMenu}
-        >
-          <div className={styles.burger_line}></div>
-          <div className={styles.burger_line}></div>
-          <div className={styles.burger_line}></div>
-        </div>
-        <p>Меню</p>
-      </div>
-    </header>
+      </CallBackHeaderWrapper>
+      <BurgerContainer onClick={toggleMenu}>
+        <BurgerWrapper isOpen={isOpen}>
+          <BurgerLine isOpen={isOpen} index={1} />
+          <BurgerLine isOpen={isOpen} index={2} />
+          <BurgerLine isOpen={isOpen} index={3} />
+        </BurgerWrapper>
+      </BurgerContainer>
+    </HeaderContainer>
   );
 };

@@ -61,30 +61,32 @@ export const Themes = () => {
           <img src={Themes_img} alt="Themes_img" />
         </ThemesImgContainer>
       </ThemesWrapper>
-      <StyledPageNumber align="left">03</StyledPageNumber>
-      <QuestionsWrapper>
-        <ThemesBlockWrapper>
-          <QuestionsTitleWrapper>
-            <SectionTitle align="right" borderBottom="dark">
-              Запити, з якими звертаються клієнти
-            </SectionTitle>
-          </QuestionsTitleWrapper>
-          <ThemesBlock>
-            {questionsData.map((item, index) => (
-              <QuestionWrapper key={index}>
-                <p>{item}</p>
-              </QuestionWrapper>
-            ))}
-          </ThemesBlock>
-        </ThemesBlockWrapper>
-        <ThemesImgContainer>
-          <img
-            src={Questions_img}
-            alt="Themes_img"
-            style={{ transform: "scaleX(-1)" }}
-          />
-        </ThemesImgContainer>
-      </QuestionsWrapper>
+      <section id="section_questions">
+        <StyledPageNumber align="left">03</StyledPageNumber>
+        <QuestionsWrapper>
+          <ThemesBlockWrapper>
+            <QuestionsTitleWrapper>
+              <SectionTitle align="right" borderBottom="dark">
+                Запити, з якими звертаються клієнти
+              </SectionTitle>
+            </QuestionsTitleWrapper>
+            <ThemesBlock>
+              {questionsData.map((item, index) => (
+                <QuestionWrapper key={index}>
+                  <p>{item}</p>
+                </QuestionWrapper>
+              ))}
+            </ThemesBlock>
+          </ThemesBlockWrapper>
+          <ThemesImgContainer>
+            <img
+              src={Questions_img}
+              alt="Themes_img"
+              style={{ transform: "scaleX(-1)" }}
+            />
+          </ThemesImgContainer>
+        </QuestionsWrapper>
+      </section>
     </ThemesContainer>
   );
 };

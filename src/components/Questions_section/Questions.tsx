@@ -80,24 +80,26 @@ export const Questions = () => {
   };
 
   return (
-    <SectionContainer background="green">
-      <PageNumber align="left">07</PageNumber>
-      <FaqWrapper>
-        <SectionTitle borderBottom="light">
-          Відповіді на часті запитання
-        </SectionTitle>
-        <FaqBlock>
-          {faqItems.map((item, index) => (
-            <FaqItem
-              key={index}
-              question={item.question}
-              answer={item.answer}
-              isOpen={activeIndex === index}
-              toggle={() => toggleAnswer(index)}
-            />
-          ))}
-        </FaqBlock>
-      </FaqWrapper>
-    </SectionContainer>
+    <section id="section_faq">
+      <SectionContainer background="green">
+        <PageNumber align="left">07</PageNumber>
+        <FaqWrapper>
+          <SectionTitle borderBottom="light">
+            Відповіді на часті запитання
+          </SectionTitle>
+          <FaqBlock>
+            {faqItems.map((item, index) => (
+              <FaqItem
+                key={index}
+                question={item.question}
+                answer={item.answer}
+                isOpen={activeIndex === index}
+                toggle={() => toggleAnswer(index)}
+              />
+            ))}
+          </FaqBlock>
+        </FaqWrapper>
+      </SectionContainer>
+    </section>
   );
 };
